@@ -1,0 +1,734 @@
+@font-face {
+  font-family: 'NarkisBlockMF';
+  src: url('/fonts/NarkissBlock-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TheBasics';
+  src: url('/fonts/TheBasics-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TheBasics';
+  src: url('/fonts/TheBasics-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.main {
+  min-height: calc(100vh - 120px);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  width: 440px;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Logo */
+.logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Main Title */
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #dc2626;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  line-height: 1.2;
+}
+
+/* Red Line */
+.redLine {
+  width: 100%;
+  height: 5px;
+  background: #dc2626;
+  margin: 0.1rem 0 0.75rem 0;
+}
+
+.technologySubsection {
+  margin-top: 0.5rem;
+}
+
+.technologyRedLine {
+  margin-bottom: 0.3rem;
+}
+
+.problemsRedLine {
+  margin-bottom: 0.3rem;
+}
+
+/* Section */
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  direction: rtl;
+  margin-bottom: 0;
+}
+
+.sectionWithLargeTopMargin {
+  margin-top: 1rem;
+}
+
+.sectionTitle {
+  font-size: 27px;
+  font-weight: 700;
+  color: #dc2626;
+  text-align: right;
+  direction: rtl;
+  margin: 0;
+  font-family: 'NarkisBlockMF', 'Arial Black', 'Arial', sans-serif;
+  width: 100%;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+/* Content */
+.content {
+  width: 380px;
+  max-width: 100%;
+  text-align: right;
+  direction: rtl;
+  align-self: flex-end;
+}
+
+.section:has(.problemsRedLine) .content {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section:has(.problemsRedLine) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section:has(.problemsRedLine) .dataSubsection:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section:has(.problemsRedLine) .dataSubsection:last-child .dataList {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section:has(.problemsRedLine) .dataSubsection:last-child .dataList li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section:has(.problemsRedLine) + .section {
+  margin-top: -15px;
+}
+
+.technologySectionWithMargin {
+  margin-top: 1.5rem;
+}
+
+.paragraph {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.paragraphRed {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #dc2626;
+  font-weight: 900;
+  margin: 0 0 0.75rem 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+}
+
+.paragraphRedNoMargin {
+  margin-bottom: 0;
+}
+
+/* Team Content */
+.teamContent {
+  width: 380px;
+  max-width: 100%;
+  text-align: right;
+  direction: rtl;
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.teamGroup {
+  margin-bottom: 0.75rem;
+}
+
+.teamSubtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #dc2626;
+  margin: 0 0 0.5rem 0;
+  text-align: right;
+  font-family: 'NarkisBlockMF', 'Arial Black', 'Arial', sans-serif;
+}
+
+.teamNames {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+/* Features Section */
+.featuresSection {
+  margin-top: 1.5rem;
+}
+
+.featuresTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #dc2626;
+  margin: 0 0 0.75rem 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.featuresList li {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+  font-weight: 500;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.featuresList li::before {
+  content: '←';
+  color: #dc2626;
+  position: absolute;
+  right: 0;
+}
+
+/* Not Building List */
+.notBuildingList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  direction: rtl;
+}
+
+.notBuildingList li {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1a1a1a;
+  margin: 0 0 0.4rem 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+.redX {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: inline;
+  margin-left: 0.2rem;
+}
+
+/* Subsection Title */
+.subsectionTitle {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-align: right;
+  margin: 0 0 0.5rem 0;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+  width: 100%;
+}
+
+.subsectionTitleRed {
+  color: #dc2626;
+  font-weight: 900;
+}
+
+/* Data Subsection */
+.dataSubsection {
+  margin: 1.5rem 0;
+}
+
+.dataSubsection:first-child {
+  margin-top: 0.3rem;
+}
+
+.dataSubsection:last-child {
+  margin-bottom: 0;
+}
+
+.designLanguageSubsection {
+  margin: 0.75rem 0;
+}
+
+.technologySubsection {
+  margin: 0.75rem 0;
+}
+
+.dataSubsectionTitle {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-align: right;
+  margin: 0 0 0.5rem 0;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+}
+
+.dataSubsectionTitleRed {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: 900;
+  color: #dc2626;
+  text-align: right;
+  margin: 0 0 0.5rem 0;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+}
+
+.technologySubsection .dataSubsectionTitleRed {
+  margin-bottom: 1.25rem;
+}
+
+.dataList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  text-align: right;
+  direction: rtl;
+}
+
+.dataList li {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1a1a1a;
+  margin: 0 0 0.3rem 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+.dataList li:last-child {
+  margin-bottom: 0;
+}
+
+.dataSubsection:last-child .dataList {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dataSubsection:last-child .dataList li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Content Info Subsection */
+.contentInfoSubsection {
+  margin: 1.5rem 0;
+}
+
+.contentInfoTitle {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: 900;
+  color: #dc2626;
+  text-align: right;
+  margin: 0 0 0.5rem 0;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+}
+
+.contentInfoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  direction: rtl;
+}
+
+.contentInfoList li {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+  font-weight: 500;
+  padding-right: 1.5rem;
+  position: relative;
+}
+
+.contentInfoList li::before {
+  content: '•';
+  color: #1a1a1a;
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+}
+
+/* Entity Section */
+.entitySection {
+  margin: 1.5rem 0;
+}
+
+.entityTitle {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-align: right;
+  margin: 0 0 0.5rem 0;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+}
+
+
+.entityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  direction: rtl;
+}
+
+.entityList li {
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1a1a1a;
+  margin: 0 0 0.4rem 0;
+  text-align: right;
+  font-family: 'TheBasics', 'Arial', sans-serif;
+  font-weight: 500;
+  padding-right: 1rem;
+  position: relative;
+}
+
+.entityList li::before {
+  content: '•';
+  color: #1a1a1a;
+  position: absolute;
+  right: 0;
+}
+
+/* Bezalel Logo */
+.bezalelLogoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 4px solid #dc2626;
+}
+
+.bezalelLogo {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .main {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+
+  .content,
+  .teamContent {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .logo {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+  }
+
+  .redLine {
+    margin: 0.1rem 0 0.75rem 0;
+  }
+
+  .subsectionTitle {
+    font-size: 1.25rem;
+  }
+
+  .dataSubsectionTitle,
+  .dataSubsectionTitleRed,
+  .contentInfoTitle {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .paragraph {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 1.25rem;
+  }
+
+  .paragraphRed {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .redLine {
+    margin: 0.1rem 0 0.75rem 0;
+  }
+
+  .dataSubsection {
+    margin: 1.25rem 0;
+  }
+
+  .entitySection {
+    margin: 1.25rem 0;
+  }
+
+  .entityTitle {
+    font-size: 1rem;
+  }
+
+  .entityList li {
+    font-size: 0.9rem;
+  }
+
+  .dataList li {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .contentInfoList li {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .notBuildingList li {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .teamSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .teamNames {
+    font-size: 0.95rem;
+  }
+
+  .featuresTitle {
+    font-size: 0.95rem;
+  }
+
+  .featuresList li {
+    font-size: 0.95rem;
+  }
+
+  .bezalelLogoContainer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .bezalelLogo {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 1rem 0.75rem;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .content,
+  .teamContent {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .logo {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+  }
+
+  .redLine {
+    margin: 0.1rem 0 0.75rem 0;
+  }
+
+  .subsectionTitle {
+    font-size: 1.1rem;
+  }
+
+  .dataSubsectionTitle,
+  .dataSubsectionTitleRed,
+  .contentInfoTitle {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .paragraph {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 1rem;
+  }
+
+  .paragraphRed {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .dataSubsection {
+    margin: 1rem 0;
+  }
+
+  .entitySection {
+    margin: 1rem 0;
+  }
+
+  .entityTitle {
+    font-size: 0.95rem;
+  }
+
+  .entityList li {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .dataList li {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .contentInfoList li {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .notBuildingList li {
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .teamSubtitle {
+    font-size: 1rem;
+  }
+
+  .teamNames {
+    font-size: 0.9rem;
+  }
+
+  .featuresTitle {
+    font-size: 0.9rem;
+  }
+
+  .featuresList li {
+    font-size: 0.9rem;
+  }
+
+  .bezalelLogoContainer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .bezalelLogo {
+    max-width: 100%;
+  }
+}
+
