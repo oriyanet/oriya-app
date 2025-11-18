@@ -1,8 +1,22 @@
 import { BudgetChart } from "./components/BudgetChart";
 import { getDataForChart } from "./utils";
 
+// Force dynamic rendering to prevent static generation issues
+export const dynamic = 'force-dynamic';
+
 export default async function Viz() {
-  const data = await getDataForChart();
+  let data: Array<{ name: string; code: string; amount: number }> = [];
+  let error: string | null = null;
+
+  try {
+    data = await getDataForChart();
+    if (data.length === 0) {
+      error = "No data available from the API.";
+    }
+  } catch (err) {
+    console.error('Error loading chart data:', err);
+    error = err instanceof Error ? err.message : "Failed to load chart data.";
+  }
 
   return (
     <main>
@@ -33,7 +47,16 @@ export default async function Viz() {
       <h2>Israel&apos;s 2023 Budget - Income</h2>
       <br />
       <div>
-        <BudgetChart data={data} xKey="name" yKey="amount" />
+        {error ? (
+          <div>
+            <p style={{ color: 'red' }}>Error: {error}</p>
+            <p>Please try refreshing the page or check if the API is available.</p>
+          </div>
+        ) : data.length > 0 ? (
+          <BudgetChart data={data} xKey="name" yKey="amount" />
+        ) : (
+          <p>Loading chart data...</p>
+        )}
       </div>
     </main>
   );
