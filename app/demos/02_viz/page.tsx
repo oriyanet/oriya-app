@@ -1,6 +1,8 @@
 import { BudgetChart } from "./components/BudgetChart";
 import { getDataForChart } from "./utils";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Viz() {
   const data = await getDataForChart();
 
